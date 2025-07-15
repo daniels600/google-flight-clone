@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import type { SearchParams, FlightSearchResponse, Flight } from '@/types/flight';
 import { Plane, MapPin, Calendar, Users, CheckCircle, Globe, Shield, Clock } from 'lucide-react';
-import { toast } from 'sonner';
+import { toast, Toaster } from 'sonner';
 import { searchFlights } from './services/flightAPI';
 
 type AppState = 'search' | 'results' | 'booking' | 'confirmation';
@@ -24,7 +24,7 @@ function App() {
       const results = await searchFlights(params);
       setSearchResults(results);
       setCurrentState('results');
-      toast.message("Search completed",{
+      toast.success("Search completed",{
         description: `Found ${results.totalResults} flights for your trip.`,
       });
     } catch (error) {
@@ -101,6 +101,7 @@ function App() {
             </div>
           </div>
         </div>
+         <Toaster richColors position='top-center'/>
       </div>
     );
   }
@@ -261,6 +262,7 @@ function App() {
           </div>
         </div>
       </footer>
+       <Toaster richColors position='top-center'/>
     </div>
   );
 }
