@@ -226,7 +226,7 @@ function App() {
                 <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                   <Plane className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-lg font-bold">SkySearch</span>
+                <span className="text-lg font-bold">Flightly</span>
               </div>
               <p className="text-gray-400">
                 Your trusted partner for finding the best flight deals worldwide.
@@ -258,7 +258,7 @@ function App() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 SkySearch. All rights reserved.</p>
+            <p>&copy; 2024 Flightly. All rights reserved.</p>
           </div>
         </div>
       </footer>
